@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #201e43;
+  --secondary-color: #134b70;
+  --accent1-color: #508c9b;
+  --accent2-color: #eeeeee;
+
+  --heading-font: Poppins, sans-serif;
+  --paragraph-font: Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  width: 120px;
+  margin-left: 200px;
+}
+
+.navbar {
+  margin-right: 200px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+}
+
+nav li + li::before {
+  content: '|';
+  padding: 1.5rem;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a:hover {
+  color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+p {
+  font-family: var(--paragraph-font);
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 200px;
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.social-links {
+  font-size: 1.7em;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Trips */
+.call-to-action {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.trip-descriptions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.trip {
+  width: 30%;
+  text-align: center;
+}
+
+.trip img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.trip-table {
+  margin: 20px 0;
+}
+
+.trip-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trip-table th,
+.trip-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.trip-table th {
+  background-color: #f2f2f2;
+}
