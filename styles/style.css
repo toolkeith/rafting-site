@@ -40,16 +40,17 @@ body {
   text-decoration: none;
   color: var(--primary-color);
   font-family: var(--heading-font);
+  margin-right: 1rem;
 }
 
 nav li + li::before {
   content: '|';
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .navbar li {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .navbar a:hover {
@@ -76,7 +77,8 @@ p {
   align-items: center;
   margin-top: 200px;
   border-top: 1px solid #ccc;
-  padding: 1rem;
+  padding: 2rem;
+  font-size: 1.1em;
 }
 
 .social-links {
@@ -93,33 +95,6 @@ p {
 }
 
 /* Trips */
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.493)),
-    url('/images/hero.jpg') no-repeat center / cover;
-  width: 100%;
-  height: 80vh;
-  margin: 0 auto;
-}
-
-.hero-content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-content h1 {
-  font-size: 2.5em;
-  color: var(--accent2-color);
-  margin-bottom: 5rem;
-}
-
-.hero-content p {
-  font-size: 1.5em;
-  color: var(--accent2-color);
-}
-
 .trips {
   display: flex;
   justify-content: space-around;
@@ -304,23 +279,53 @@ input[type='checkbox'] {
 }
 
 /* Home */
+.hero-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.644)),
+    url('/images/hero.jpg') no-repeat center / cover;
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  color: var(--accent2-color);
+  margin-bottom: 1rem;
+}
+
+.hero-content .cta-button {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--accent2-color);
+  background-color: var(--accent1-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 100px;
+}
+
+.hero-content .cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
 .newsletter-signup {
   text-align: center;
-  margin: 50px 0;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* margin: 50px 0; */
+  /* padding: 20px; */
 }
 
 .newsletter-signup h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.newsletter-signup p {
-  font-size: 1em;
-  margin-bottom: 20px;
+  font-size: 1.7em;
+  /* margin-bottom: 10px; */
 }
 
 .newsletter-signup form {
@@ -331,16 +336,15 @@ input[type='checkbox'] {
 
 .newsletter-signup label {
   font-size: 1em;
-  margin: 10px 0 5px;
   align-self: flex-start;
+  margin: 1rem 0;
 }
 
 .newsletter-signup input[type='text'],
 .newsletter-signup input[type='email'] {
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
@@ -348,16 +352,47 @@ input[type='checkbox'] {
 
 .newsletter-signup button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--accent2-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .newsletter-signup button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-color);
+}
+
+.site-purpose {
+  margin: 100px 0;
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+  padding: 1rem;
+  text-align: left;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.grid-item h3 {
+  font-size: 1.5em;
+  padding: 1rem 0;
+  color: var(--secondary-color);
+}
+
+.grid-item p {
+  font-size: 1.1em;
 }
 
 .call-to-action {
@@ -380,67 +415,8 @@ input[type='checkbox'] {
   margin-bottom: 20px;
 }
 
-.call-to-action .cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: white;
-  color: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.call-to-action .cta-button:hover {
-  background-color: #0056b3;
-  color: white;
-}
-
-.site-purpose {
-  text-align: center;
-  margin: 50px 0;
-  padding: 20px;
-}
-
-.site-purpose h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.grid-item {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.grid-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.grid-item h3 {
-  font-size: 1.5em;
-  margin: 10px 0 5px;
-}
-
-.grid-item p {
-  font-size: 1em;
-  color: #666;
-}
-
 /* About */
-.hero {
+/* .hero {
   position: relative;
   clear: both;
 }
@@ -514,4 +490,4 @@ figure img {
   width: 180px;
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
-}
+} */
